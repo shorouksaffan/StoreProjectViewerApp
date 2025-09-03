@@ -1,16 +1,14 @@
-package com.example.storeproductviewer
+package com.example.storeproductviewer.ui.viewmodel
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.storeproductviewer.ui.viewmodel.Result
+import com.example.storeproductviewer.data.remote.RetrofitInstance
+import com.example.storeproductviewer.data.model.Product
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-
-sealed class Result<out T> {
-    data class Success<out T>(val data: T) : Result<T>()
-    data class Error(val message: String) : Result<Nothing>()
-    object Loading : Result<Nothing>()
-}
 
 class ProductViewModel : ViewModel() {
     private val _products = MutableStateFlow<Result<List<Product>>>(Result.Loading)

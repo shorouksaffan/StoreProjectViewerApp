@@ -1,4 +1,4 @@
-package com.example.storeproductviewer
+package com.example.storeproductviewer.data.model
 
 import kotlinx.serialization.Serializable
 
@@ -12,9 +12,3 @@ data class Product(
     val category: Category
 )
 
-@Serializable
-data class Category(
-    val id: Int,
-    val name: String,
-    val image: String
-)

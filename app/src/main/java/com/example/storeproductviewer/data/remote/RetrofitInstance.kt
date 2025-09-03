@@ -1,4 +1,4 @@
-package com.example.storeproductviewer
+package com.example.storeproductviewer.data.remote
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json

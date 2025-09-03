@@ -1,5 +1,6 @@
-package com.example.storeproductviewer
+package com.example.storeproductviewer.data.remote
 
+import com.example.storeproductviewer.data.model.Product
 import retrofit2.http.GET
 import retrofit2.http.Path
 
